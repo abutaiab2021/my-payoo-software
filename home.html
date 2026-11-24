@@ -76,15 +76,24 @@
         </p>
         <!-- buttons -->
         <div class="buttons grid grid-cols-3 gap-3">
-          <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+          <button
+            onclick="showOnly('add-money')"
+            class="btn flex-col h-full py-4 btn-primary btn-soft"
+          >
             <img src="assets/opt-1.png" alt="" />
             <p>Add Money</p>
           </button>
-          <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+          <button
+            onclick="showOnly('cashout')"
+            class="btn flex-col h-full py-4 btn-primary btn-soft"
+          >
             <img src="assets/opt-2.png" alt="" />
             <p>Cashout</p>
           </button>
-          <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+          <button
+            onclick="showOnly('send-money')"
+            class="btn flex-col h-full py-4 btn-primary btn-soft"
+          >
             <img src="assets/opt-3.png" alt="" />
             <p>Send Money</p>
           </button>
@@ -105,7 +114,7 @@
     </section>
 
     <!-- add money page-->
-    <section id="add-money" class="w-11/12 mx-auto py-5">
+    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-2">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
@@ -197,7 +206,7 @@
     </section>
 
     <!-- send money page-->
-    <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
+    <section id="send-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-2">Send Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
@@ -239,6 +248,12 @@
           </fieldset>
         </div>
       </div>
+    </section>
+
+    <!-- transaction page -->
+    <section id="history" class="w-11/12 mx-auto p-5">
+      <h2 class="text-xl font-bold mb-2">Transactions</h2>
+      <div class="space-y-5" id="history-container"></div>
     </section>
 
     <!-- maschine form conneted link-->

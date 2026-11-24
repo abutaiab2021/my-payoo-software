@@ -15,9 +15,26 @@ function getCurrentBalance() {
   return Number(currentBalance);
 }
 
-// for set balance (minus kore current balance dekhar jonno)
+//machine <= value for set balance (minus kore current balance dekhar jonno)
 function setBalance(value) {
   const currentBalanceElement = document.getElementById("balance");
   currentBalanceElement.innerText = value;
   console.log(currentBalanceElement.innerText);
+}
+
+// machine <= id  => hide all => show id
+function showOnly(id) {
+  // console.log("Show only click");
+  const addMoney = document.getElementById("add-money");
+  const cashOut = document.getElementById("cashout");
+  const sendMoney = document.getElementById("send-money");
+  // console.log(`Add Money- ${addMoney}, Send Money-${cashOut}`);
+  // sovaike hide kore deo
+  addMoney.classList.add("hidden");
+  cashOut.classList.add("hidden");
+  sendMoney.classList.add("hidden");
+
+  // id wala element ta ke show kore deo
+  const selected = document.getElementById(id);
+  selected.classList.remove("hidden");
 }

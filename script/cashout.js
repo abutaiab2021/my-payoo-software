@@ -34,6 +34,22 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     alert("Cashout Successfully");
     // console.log("New Balance : ", newBalance);
     setBalance(newBalance);
+    // 1.history container ke dore niye asbo
+    const history = document.getElementById("history-container");
+    console.log(history);
+    // 2.new div create korbo
+    const newHistory = document.createElement("div");
+    console.log(newHistory);
+    // 3.new div innerHTML add korbo
+    newHistory.innerHTML = `
+    <div class="transction-card p-10 bg-base-100">
+          Cashout Successfully!
+          ${amount} Taka to 
+          ${agNum} at ${new Date()}
+    </div>
+    `;
+    // 4.history container e newDiv Append
+    history.append(newHistory);
   } else {
     // alternation error message for not valied pin
     alert("Invalid Pin");
