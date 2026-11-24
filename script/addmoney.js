@@ -7,7 +7,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
 
   //   bankselect validation
   if (bankName === "Select Bank") {
-    alert("Please select the Bank!");
+    alert("Please select a Bank!");
     return;
   }
 
@@ -47,7 +47,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   console.log("pin number is :", pin);
   //   validation
   if (pin === "1234") {
-    alert("Add Money Successfully.");
+    alert(`Add Money Successfully! ${bankName}`);
     // set balance
     setBalance(newBalance);
   } else {
