@@ -17,7 +17,7 @@ document.getElementById("login-btn").addEventListener("click", function () {
     window.location.assign("/home.html");
   } else {
     // 3-2 => false :::=> alert => return kore off kore dibo
-    alert("Login Failed");
+    alert("Please Enter Your Pin!");
     return;
   }
 });
