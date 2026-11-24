@@ -104,8 +104,8 @@
       </div>
     </section>
 
-    <!-- add money -->
-    <section id="add-money" class="w-11/12 mx-auto py-5">
+    <!-- add money page-->
+    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-2">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
@@ -149,7 +149,7 @@
               id="add-money-btn"
               class="btn btn-primary mt-4 rounded-full"
             >
-              Add Money
+              Add Money<i class="fa-solid fa-arrow-left-to-bracket"></i>
             </button>
           </fieldset>
         </div>
@@ -196,11 +196,58 @@
       </div>
     </section>
 
+    <!-- send money page-->
+    <section id="cashout" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-2">Send Money</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold"
+              >User Account Number</label
+            >
+            <input
+              id="send-money-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              value="01234567890"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter user 11 digit Number"
+            />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input
+              id="send-money-amount"
+              type="number"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter amount to withdraw"
+            />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="send-money-pin"
+              maxlength="4"
+              type="password"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter 4 Digit Pin Number"
+            />
+            <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+            <button
+              id="send-money-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
+              Send Now<i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <!-- maschine form conneted link-->
     <script src="script/maschine.js"></script>
     <!-- add money form connected link -->
     <script src="script/addmoney.js"></script>
     <!-- cash out form conneted  link-->
     <script src="script/cashout.js"></script>
+    <!-- send money page link -->
+    <script src="script/sendmoney.js"></script>
   </body>
 </html>
