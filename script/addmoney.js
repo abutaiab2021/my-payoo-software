@@ -15,10 +15,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   const bankAccNum = getValueFromInput("bank-acc-num");
   //   console.log("Bank Account Number : ", bankAccNum);
   //   bank account number validation
-  if (bankAccNum < 0) {
-    alert("Please Provide a valid positive number");
-    return;
-  } else if (bankAccNum.length != 16) {
+  if (bankAccNum.length !== 11) {
     alert("Please provide a valid Bank account Number");
     return;
   }
@@ -44,7 +41,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
 
   //   get pin
   const pin = getValueFromInput("add-money-pin");
-  console.log("pin number is :", pin);
+  // console.log("pin number is :", pin);
   //   validation
   if (pin === "1234") {
     // caret simbol use kora hoise
@@ -55,10 +52,10 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     setBalance(newBalance);
     // 1.history container ke dore niye asbo
     const history = document.getElementById("history-container");
-    console.log(history);
+    // console.log(history);
     // 2.new div create korbo
     const newHistory = document.createElement("div");
-    console.log(newHistory);
+    // console.log(newHistory);
     // 3.new div innerHTML add korbo
     newHistory.innerHTML = `
     <div class="transction-card p-10 bg-base-100">

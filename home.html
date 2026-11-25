@@ -197,6 +197,7 @@
           <!-- Pay Bill -->
           <div class="aura aura-rainbow w-full aspect-square">
             <button
+              onclick="showOnly('pay-bill')"
               class="btn btn-primary btn-soft flex-col w-full h-full py-4"
             >
               <img src="assets/opt-5.png" alt="" />
@@ -219,13 +220,14 @@
     </section>
 
     <!-- Leatest payment history-->
-    <section id="all-transction" class="w-11/12 mx-auto py-5">
+    <section id="all-transction" class="w-11/12 mx-auto py-5 hidden">
       <div class="flex justify-between">
         <h2 class="text-xl font-bold mb-2">Leatest Payment</h2>
         <h2 class="text text-neutral/50">View All</h2>
       </div>
-      <div class="space-y-5" id="history-container"></div>
+      <div class="space-y-5" id="all-history-container"></div>
     </section>
+
     <!-- add money page-->
     <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-2">Add Money</h2>
@@ -249,8 +251,9 @@
             <input
               id="bank-acc-num"
               type="text"
+              value="12345678912"
               class="input input-primary rounded-full w-full bg-base-200"
-              placeholder="Enter Your 16 digit Account Number"
+              placeholder="Enter Your 11 digit Account Number"
             />
             <label class="label text-neutral font-bold">Amount to Add</label>
             <input
@@ -351,7 +354,6 @@
               class="input input-primary rounded-full w-full bg-base-200"
               placeholder="Enter 4 Digit Pin Number"
             />
-            <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
             <button
               id="send-money-btn"
               class="btn btn-primary mt-4 rounded-full"
@@ -389,6 +391,56 @@
       </div>
     </section>
 
+    <!-- pay bill page-->
+    <section id="pay-bill" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-xl font-bold mb-2">Pay Bill</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Select to Pay</label>
+            <select
+              id="biller-bank"
+              class="select select-primary rounded-full w-full bg-base-200"
+            >
+              <option disabled selected>Select Bank</option>
+              <option>USB Bank</option>
+              <option>NRB Bank</option>
+              <option>City Bank</option>
+            </select>
+
+            <label class="label text-neutral font-bold"
+              >Biller Account Number</label
+            >
+            <input
+              id="biller-acc-no"
+              value="12345678912"
+              type="text"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter Your 11 digit Account Number"
+            />
+            <label class="label text-neutral font-bold">Amount to Add</label>
+            <input
+              id="biller-amt"
+              type="number"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter amount to Money"
+            />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="biller-pin"
+              maxlength="4"
+              type="password"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter 4 Digit Pin Number"
+            />
+            <button id="pay-bill-btn" class="btn btn-primary mt-4 rounded-full">
+              Pay Now<i class="fa-solid fa-forward"></i>
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <!-- transaction page -->
     <section id="history" class="w-11/12 mx-auto p-5 hidden">
       <h2 class="text-xl font-bold mb-2">Transactions</h2>
@@ -405,5 +457,7 @@
     <script src="script/sendmoney.js"></script>
     <!-- get bonus page link -->
     <script src="script/getbonus.js"></script>
+    <!-- pay bill page link-->
+    <script src="script/paybill.js"></script>
   </body>
 </html>
