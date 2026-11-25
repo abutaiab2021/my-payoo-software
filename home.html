@@ -186,6 +186,7 @@
           <!-- Get Bonus -->
           <div class="aura aura-rainbow w-full aspect-square">
             <button
+              onclick="showOnly('get-bonus')"
               class="btn btn-primary btn-soft flex-col w-full h-full py-4"
             >
               <img src="assets/opt-4.png" alt="" />
@@ -218,7 +219,7 @@
     </section>
 
     <!-- add money page-->
-    <section id="add-money" class="w-11/12 mx-auto py-5">
+    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-2">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
@@ -354,6 +355,32 @@
       </div>
     </section>
 
+    <!-- Get Bonus-->
+    <section id="get-bonus" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-2">Get Bonus</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold"
+              >Enter Your Bonus Cupon</label
+            >
+            <input
+              id="bonus-cupon"
+              type="text"
+              class="input input-primary rounded-full w-full bg-base-200"
+              placeholder="Enter Your Cupon Text"
+            />
+            <button
+              id="get-bonus-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
+              Get Bonus<i class="fa-solid fa-arrow-left-to-bracket"></i>
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <!-- transaction page -->
     <section id="history" class="w-11/12 mx-auto p-5 hidden">
       <h2 class="text-xl font-bold mb-2">Transactions</h2>
@@ -368,5 +395,7 @@
     <script src="script/cashout.js"></script>
     <!-- send money page link -->
     <script src="script/sendmoney.js"></script>
+    <!-- get bonus page link -->
+    <script src="script/getbonus.js"></script>
   </body>
 </html>
