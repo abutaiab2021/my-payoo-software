@@ -57,9 +57,80 @@
           </div>
         </div>
         <div class="right">
-          <a href="/index.html" class="btn btn-soft">
+          <a href="/index.html" class="btn btn-soft border border-primary">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
           </a>
+          <!-- theme -->
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn m-1 btn-soft border border-primary"
+            >
+              <p class="text-primary">Theme</p>
+              <svg
+                width="12px"
+                height="12px"
+                class="inline-block h-2 w-2 fill-current opacity-60"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 2048 2048"
+              >
+                <path
+                  d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+                ></path>
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl"
+            >
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Light"
+                  value="light"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Black"
+                  value="black"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Garden"
+                  value="garden"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Valentine"
+                  value="valentine"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Dracula"
+                  value="dracula"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </header>
@@ -67,51 +138,81 @@
     <!-- all transation buttons -->
     <section class="bg-base-100 shadow rounded-b-2xl">
       <div class="w-11/12 mx-auto py-10 px-10 space-y-5">
-        <h2 class="text-3xl font-bold">
-          Welcome to Pay<span class="text-primary">oo</span>
-        </h2>
-        <p class="text-neutral/50 py-5">
-          Enjoy easy and convenient financial services with us. Cashout charge
-          is low and
-        </p>
-        <!-- buttons -->
-        <div class="buttons grid grid-cols-3 gap-3">
-          <button
-            onclick="showOnly('add-money')"
-            class="btn flex-col h-full py-4 btn-primary btn-soft"
-          >
-            <img src="assets/opt-1.png" alt="" />
-            <p>Add Money</p>
-          </button>
-          <button
-            onclick="showOnly('cashout')"
-            class="btn flex-col h-full py-4 btn-primary btn-soft"
-          >
-            <img src="assets/opt-2.png" alt="" />
-            <p>Cashout</p>
-          </button>
-          <button
-            onclick="showOnly('send-money')"
-            class="btn flex-col h-full py-4 btn-primary btn-soft"
-          >
-            <img src="assets/opt-3.png" alt="" />
-            <p>Send Money</p>
-          </button>
-          <button class="btn flex-col h-full py-4 btn-primary btn-soft">
-            <img src="assets/opt-4.png" alt="" />
-            <p>Get Bonus</p>
-          </button>
-          <button class="btn flex-col h-full py-4 btn-primary btn-soft">
-            <img src="assets/opt-5.png" alt="" />
-            <p>Pay Bill</p>
-          </button>
-          <button
-            onclick="showOnly('history')"
-            class="btn flex-col h-full py-4 btn-primary btn-soft"
-          >
-            <img src="assets/opt-6.png" alt="" />
-            <p>Transactions</p>
-          </button>
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Welcome to Pay<span class="text-primary">oo</span>
+          </h2>
+          <p class="text-neutral/50 py-5">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons grid grid-cols-3 gap-[10px]">
+          <!-- Add Money -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              onclick="showOnly('add-money')"
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </button>
+          </div>
+
+          <!-- Cashout -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              onclick="showOnly('cashout')"
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-2.png" alt="" />
+              <p>Cashout</p>
+            </button>
+          </div>
+
+          <!-- Send Money -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              onclick="showOnly('send-money')"
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-3.png" alt="" />
+              <p>Send Money</p>
+            </button>
+          </div>
+
+          <!-- Get Bonus -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-4.png" alt="" />
+              <p>Get Bonus</p>
+            </button>
+          </div>
+
+          <!-- Pay Bill -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-5.png" alt="" />
+              <p>Pay Bill</p>
+            </button>
+          </div>
+
+          <!-- Transactions -->
+          <div class="aura aura-rainbow w-full aspect-square">
+            <button
+              onclick="showOnly('history')"
+              class="btn btn-primary btn-soft flex-col w-full h-full py-4"
+            >
+              <img src="assets/opt-6.png" alt="" />
+              <p>Transactions</p>
+            </button>
+          </div>
         </div>
       </div>
     </section>
